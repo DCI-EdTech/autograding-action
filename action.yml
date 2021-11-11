@@ -9,3 +9,10 @@ runs:
 
     - uses: education/autograding@v1
       id: autograder
+      
+    - name: badges branch and make dir
+      run: |
+        git checkout --orphan badges
+        git rm -rf .
+        mkdir -p .github/badges
+      shell: bash
