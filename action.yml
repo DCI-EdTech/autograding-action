@@ -8,5 +8,4 @@ runs:
         fetch-depth: 0
 
     - uses: education/autograding@v1
-        id: autograder
         continue-on-error: true
