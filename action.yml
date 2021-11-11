@@ -29,9 +29,9 @@ runs:
         path: '.github/badges/points.svg'
         
     - name: Upload badge as artifact
-        uses: actions/upload-artifact@v2
-        with:
-          name: badge
-          path: '.github/badges/points.svg'
-          if-no-files-found: error
-          retention-days: 1
+      uses: actions/upload-artifact@v2
+      with:
+        name: badge
+        path: '.github/badges/points.svg'
+        if-no-files-found: error
+        retention-days: 1
