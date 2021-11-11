@@ -9,6 +9,7 @@ runs:
 
     - uses: education/autograding@v1
       id: autograder
+      continue-on-error: true
       
     - name: badges branch and make dir
       run: |
@@ -35,3 +36,19 @@ runs:
         path: '.github/badges/points.svg'
         if-no-files-found: error
         retention-days: 1
+        
+    - name: Commit badge
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add '.github/badges/points.svg'
+        git commit -m "Add/Update badge"
+      shell: bash
+      continue-on-error: true
+      
+    - name: Push badge commit
+      uses: ad-m/github-push-action@master
+      with:
+        force: true
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch: badges
