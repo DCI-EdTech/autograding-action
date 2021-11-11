@@ -16,3 +16,14 @@ runs:
         git rm -rf .
         mkdir -p .github/badges
       shell: bash
+      
+    - name: points badge
+      uses: emibcn/badge-action@v1
+      with:
+        LABEL: 'Points'
+        STATUS: ${{ steps.autograder.outputs.points }}
+        LABEL-COLOR: 2f496e
+        COLOR: 2988bc
+        SCALE: 2
+        STYLE: flat
+        path: '.github/badges/points.svg'
