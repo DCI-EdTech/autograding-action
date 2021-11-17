@@ -7,7 +7,7 @@ runs:
       with:
         fetch-depth: 0
 
-    - uses: education/autograding@v1
+    - uses: DCI-EdTech/autograding@main
       id: autograder
       
     - name: badges branch and make dir
