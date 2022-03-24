@@ -14,5 +14,5 @@ runs:
     - uses: DCI-EdTech/autograding@main
       id: autograder
       
-    - name: "output"
-      run: echo 'test'
+    - name: "autograder"
+      run: echo '::set-output name=Points::5/10'
