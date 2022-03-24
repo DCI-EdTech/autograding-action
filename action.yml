@@ -1,7 +1,7 @@
-name: 'Autograding'
+name: 'Autograding Action'
 description: 'Setup and test'
 outputs:
-  Points:
+  Autograding:
     description: "Points"
     value: ${{ steps.autograder.outputs.Points }}
 runs:
