@@ -1,6 +1,9 @@
 name: 'Autograding'
 description: 'Setup and test'
-outputs: ${{ steps.autograder.outputs.Points }}
+outputs:
+  Points:
+    description: "Points"
+    value: ${{ steps.autograder.outputs.Points }}
 runs:
   using: "composite"
   steps:
