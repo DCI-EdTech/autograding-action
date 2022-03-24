@@ -13,3 +13,6 @@ runs:
 
     - uses: DCI-EdTech/autograding@main
       id: autograder
+      
+    - name: "output"
+      run: echo 'test'
