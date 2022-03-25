@@ -1,7 +1,7 @@
 name: 'Autograding Action'
 description: 'Setup and test'
 outputs:
-  GitHub Classroom Workflow:
+  Autograding:
     description: "Points"
     value: ${{ steps.autograder.outputs.Points }}
 runs:
