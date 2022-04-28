@@ -13,5 +13,3 @@ runs:
 
     - uses: DCI-EdTech/autograding@branch-protection
       id: autograder
-      with:
-        token: ${{ secrets.MAXIM }}
