@@ -14,4 +14,4 @@ runs:
     - uses: DCI-EdTech/autograding@branch-protection
       id: autograder
       with:
-        token: ${{ secrets.pat }}
+        token: ${{ secrets.MAXIM }}
