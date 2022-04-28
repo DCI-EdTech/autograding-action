@@ -11,5 +11,5 @@ runs:
       with:
         fetch-depth: 0
 
-    - uses: DCI-EdTech/autograding@main
+    - uses: DCI-EdTech/autograding@branch-protection
       id: autograder
