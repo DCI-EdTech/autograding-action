@@ -2,7 +2,7 @@ name: 'Autograding Action'
 description: 'Setup and test'
 inputs:
   token:
-    description: 'gh token'
+    description: 'token'
     required: false
     default: ${{ github.GITHUB_TOKEN }}
 outputs:
@@ -20,4 +20,5 @@ runs:
     - uses: DCI-EdTech/autograding@branch-protection
       id: autograder
       with:
-        token: ${{ secrets.MAXIM }}
+        token: ${{ inputs.token }}
+        ghtoken: ${{ github.GITHUB_TOKEN }}
