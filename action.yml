@@ -3,7 +3,8 @@ description: 'Setup and test'
 inputs:
   token:
     description: 'gh token'
-    required: true
+    required: false
+    default: ${{ github.GITHUB_TOKEN }}
 outputs:
   GitHubClassroomWorkflow:
     description: "Points"
