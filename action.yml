@@ -4,7 +4,7 @@ inputs:
   token:
     description: 'token'
     required: false
-    default: ${{ github.GITHUB_TOKEN }}
+    default: ${{ github.token }}
 outputs:
   GitHubClassroomWorkflow:
     description: "Points"
