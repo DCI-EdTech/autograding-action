@@ -21,4 +21,3 @@ runs:
       id: autograder
       with:
         token: ${{ inputs.token }}
-        ghtoken: ${{ github.GITHUB_TOKEN }}
