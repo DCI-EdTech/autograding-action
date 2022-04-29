@@ -19,5 +19,5 @@ runs:
 
     - uses: DCI-EdTech/autograding@branch-protection
       id: autograder
-      env:
-        GITHUB_TOKEN: ${{ inputs.token }}
+      with:
+        token: ${{ inputs.token }}
