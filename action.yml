@@ -19,4 +19,4 @@ runs:
     - uses: DCI-EdTech/autograding@branch-protection
       id: autograder
       with:
-        token: ${{ secrets.AUTOGRADING }}
+        token: ${{ inputs.token }}
