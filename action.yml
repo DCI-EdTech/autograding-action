@@ -1,5 +1,10 @@
 name: 'Autograding Action'
 description: 'Setup and test'
+inputs:
+  token:
+    description: 'token'
+    required: false
+    default: ${{ github.token }}
 outputs:
   GitHubClassroomWorkflow:
     description: "Points"
@@ -11,5 +16,7 @@ runs:
       with:
         fetch-depth: 0
 
-    - uses: DCI-EdTech/autograding@main
+    - uses: DCI-EdTech/autograding@branch-protection
       id: autograder
+      with:
+        token: ${{ inputs.token }}
