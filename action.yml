@@ -16,7 +16,8 @@ runs:
       with:
         fetch-depth: 0
 
-    - uses: DCI-EdTech/autograding@codebuddy
+    - name: Autograding
+      uses: DCI-EdTech/autograding@codebuddy
       id: autograder
       with:
         token: ${{ inputs.token }}
