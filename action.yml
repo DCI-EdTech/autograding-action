@@ -1,4 +1,4 @@
-name: 'Autograding Action'
+name: 'CodeBuddy Action'
 description: 'Setup and test'
 inputs:
   token:
