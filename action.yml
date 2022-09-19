@@ -21,5 +21,4 @@ runs:
       with:
         token: ${{ inputs.token }}
         classes: |
-          Autograding-Demo-Class
           FbW-E05-B
