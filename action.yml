@@ -16,7 +16,10 @@ runs:
       with:
         fetch-depth: 0
 
-    - uses: DCI-EdTech/autograding@main
+    - uses: DCI-EdTech/autograding@classes
       id: autograder
       with:
         token: ${{ inputs.token }}
+        classes: |
+          Autograding-Demo-Class
+          FbW-E05-B
