@@ -20,4 +20,4 @@ runs:
       id: autograder
       with:
         token: ${{ inputs.token }}
-        classes: test
+        test: test
