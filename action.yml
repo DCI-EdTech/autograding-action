@@ -20,6 +20,4 @@ runs:
       id: autograder
       with:
         token: ${{ inputs.token }}
-        classes: |
-          Autograding-Demo-Class
-          FbW-E05-B
+        classes: "Autograding-Demo-Class,FbW-E05-B"
