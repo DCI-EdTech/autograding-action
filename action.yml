@@ -16,7 +16,7 @@ runs:
       with:
         fetch-depth: 0
 
-    - uses: DCI-EdTech/autograding@main
+    - uses: DCI-EdTech/autograding@patch/action
       id: autograder
       with:
         token: ${{ inputs.token }}
