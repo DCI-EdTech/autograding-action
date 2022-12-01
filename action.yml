@@ -19,7 +19,7 @@ runs:
       with:
         node-version: '16'
         cache: 'npm'
-    - uses: DCI-EdTech/autograding@main
+    - uses: DCI-EdTech/autograding@cache
       id: autograder
       with:
         token: ${{ inputs.token }}
