@@ -26,7 +26,7 @@ runs:
         key: ${{ runner.os }}-jest-${{ hashFiles('.jest-cache') }}
         restore-keys: |
           ${{ runner.os }}-jest-
-    - uses: DCI-EdTech/autograding@cache
+    - uses: DCI-EdTech/autograding@main
       id: autograder
       with:
         token: ${{ inputs.token }}
