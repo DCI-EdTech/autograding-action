@@ -19,6 +19,13 @@ runs:
       with:
         node-version: '16'
         cache: 'npm'
+    - uses: actions/cache@v3
+      id: jest-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+      with:
+        path: .jest-cache
+        key: ${{ runner.os }}-jest-${{ hashFiles('.jest-cache') }}
+        restore-keys: |
+          ${{ runner.os }}-jest-
     - uses: DCI-EdTech/autograding@cache
       id: autograder
       with:
