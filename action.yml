@@ -23,7 +23,7 @@ runs:
       id: jest-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
       with:
         path: .jest-cache
-        key: ${{ runner.os }}-jest-${{ hashFiles('.jest-cache') }}
+        key: ${{ runner.os }}-jest
         restore-keys: |
           ${{ runner.os }}-jest-
     - uses: DCI-EdTech/autograding@cache
