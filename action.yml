@@ -20,12 +20,19 @@ runs:
         node-version: '16'
         cache: 'npm'
     - uses: actions/cache@v3
-      id: jest-cache # use this to check for `cache-hit` ==> if: steps.npm-cache.outputs.cache-hit != 'true'
+      id: tmp-cache
       with:
-        path: .jest-cache
-        key: ${{ runner.os }}-jest-${{ hashFiles('.jest-cache') }}
+        path: /tmp
+        key: ${{ runner.os }}-tmp-${{ hashFiles('/tmp') }}
         restore-keys: |
-          ${{ runner.os }}-jest-
+          ${{ runner.os }}-tmp-
+    - uses: actions/cache@v3
+      id: puppeteer-chromium-cache
+      with:
+        path: node_modules/puppeteer/.local-chromium
+        key: ${{ runner.os }}-puppeteer-chromium-${{ hashFiles('node_modules/puppeteer/.local-chromium') }}
+        restore-keys: |
+          ${{ runner.os }}-puppeteer-chromium-
     - uses: DCI-EdTech/autograding@main
       id: autograder
       with:
