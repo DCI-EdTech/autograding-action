@@ -22,6 +22,7 @@ runs:
         node-version: '16'
         cache: 'npm'
     - uses: DCI-EdTech/autograding@main
+      if: failure()
       id: autograder
       with:
         token: ${{ inputs.token }}
