@@ -12,9 +12,8 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - runs: exit 1
-    - if: always()
     - uses: actions/checkout@v3
+      if: github.repository == 'FBW-Demo-Org/PB-arrays-pt1'
       with:
         fetch-depth: 0
     - uses: actions/setup-node@v3
