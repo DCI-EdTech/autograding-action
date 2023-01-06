@@ -8,7 +8,7 @@ inputs:
   skip:
     description: 'skip workflow if classroom bot'
     required: false
-    default: github.triggering_actor != 'github-classroom[bot]' && 'skip'
+    default: github.triggering_actor == 'github-classroom[bot]' && 'skip'
 outputs:
   GitHubClassroomWorkflow:
     description: "Points"
