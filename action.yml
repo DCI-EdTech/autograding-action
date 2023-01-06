@@ -17,12 +17,12 @@ runs:
       with:
         fetch-depth: 0
     - uses: actions/setup-node@v3
-      if: failure()
+      if: success()
       with:
         node-version: '16'
         cache: 'npm'
     - uses: DCI-EdTech/autograding@main
-      if: failure()
+      if: success()
       id: autograder
       with:
         token: ${{ inputs.token }}
