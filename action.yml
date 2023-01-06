@@ -8,7 +8,7 @@ inputs:
   skip:
     description: 'skip workflow if classroom bot'
     required: false
-    default: ${{ github.triggering_actor == 'github-classroom[bot]' }}
+    default: ${{ github.triggering_actor == 'github-classroom[bot]' && 'skip' }}
 outputs:
   GitHubClassroomWorkflow:
     description: "Points"
@@ -17,16 +17,16 @@ runs:
   using: "composite"
   steps:
     - uses: actions/checkout@v3
-      if: ${{ !inputs.skip }}
+      if: inputs.skip != 'skip'
       with:
         fetch-depth: 0
     - uses: actions/setup-node@v3
-      if: ${{ !inputs.skip }}
+      if: inputs.skip != 'skip'
       with:
         node-version: '16'
         cache: 'npm'
     - uses: DCI-EdTech/autograding@main
-      if: ${{ !inputs.skip }}
+      if: inputs.skip != 'skip'
       id: autograder
       with:
         token: ${{ inputs.token }}
