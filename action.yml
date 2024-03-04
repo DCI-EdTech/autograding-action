@@ -23,7 +23,7 @@ runs:
     - uses: actions/setup-node@v3
       if: inputs.skip != 'skip'
       with:
-        node-version: '16'
+        node-version: '20'
         cache: 'npm'
     - uses: DCI-EdTech/autograding@main
       if: inputs.skip != 'skip'
